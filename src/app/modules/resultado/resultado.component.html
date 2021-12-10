@@ -1,0 +1,41 @@
+<div class="row">
+
+    <div class="col-2">
+
+    </div>
+
+    <div class="col-8">
+        
+        <div class="miga">{{miga}}</div>
+
+        <div class="principal" *ngFor="let item of results | slice:0:4">
+            
+            <div class="row detalle" (click)="detalles(item, item.id)">
+
+                <div class="col-sm-3 col-xs-3">
+                    <img src="{{item.picture}}" class="mt-1" alt="picture item producto" title="imagen producto" width="128px" height="128px">
+                </div>
+    
+                <div class="col-sm-5 col-xs-6">
+                    <br>
+                    <label>{{ item.price.amount | currency:'ARS ':'symbol'}}</label><br>
+                    <label>{{item.title}}</label>
+                </div>
+    
+                <div class="col-sm-4 col-xs-6">
+                    <br>
+                    <label >Condicion: {{item.condition == 'new'? 'Nuevo' : 'Usado'}}</label><br>
+                    <label >Envio gratis: {{item.free_shipping? 'Si' : 'No'}}</label>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="col-2">
+
+    </div>
+
+</div>

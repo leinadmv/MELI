@@ -1,0 +1,42 @@
+<div class="row">
+
+    <div class="col-2">
+
+    </div>
+
+    <div class="col-8">
+        
+        <div class="miga"></div>
+
+        <div class="row principal" >
+            
+            <div class="col-sm-7">
+                <br>
+                <img src="{{detalle.info.picture}}" class="mt-1" alt="picture item producto" title="imagen producto" width="128px" height="128px">
+            </div>
+
+            <div class="col-sm-5">
+
+                <br>
+                <h4>{{detalle.info.title}}</h4><br>
+                <h2>{{detalle.info.price.amount | currency:'ARS ':'symbol'}}</h2><br>
+
+                <button type="button" class="btn btn-primary boton">Comprar</button>
+
+            </div>
+
+            <div class="col-sm-7 col-xs-12">
+                <br>
+                <h2>Descripcion del producto</h2><br>
+                <label>{{detalle.detalle.plain_text}}</label>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="col-2">
+
+    </div>
+
+</div>
